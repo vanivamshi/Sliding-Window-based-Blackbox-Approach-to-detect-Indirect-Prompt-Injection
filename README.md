@@ -59,14 +59,14 @@ The `MetaPromptDetector` class uses a multi-layered approach:
 
 ```
 llm-gmail-assistant/
-├── llm_query.py          # Main detection implementation
+├── main.py          # Main detection implementation
 └── README.md             # This file
 ```
 
 ## Required Files
 
 **Only one file is required:**
-- `llm_query.py` - The complete implementation (self-contained)
+- `main.py` - The complete implementation (self-contained)
 
 **No other files are needed.** The script uses only Python standard library modules:
 - `re` (regex)
@@ -98,7 +98,7 @@ The file is completely self-contained and can run standalone. However, you will 
 ### Basic Usage
 
 ```python
-from llm_query import MetaPromptDetector, VulnerableTestModel
+from main import MetaPromptDetector, VulnerableTestModel
 
 # Initialize with your model client
 model = YourModelClient()  # Replace with your LLM client
@@ -120,7 +120,7 @@ print(f"Risk Score: {result['risk_score']}")  # 0.0 to 1.0
 The file includes a comprehensive test suite that demonstrates various attack scenarios:
 
 ```bash
-python llm_query.py
+python main.py
 ```
 
 This will run tests for:
