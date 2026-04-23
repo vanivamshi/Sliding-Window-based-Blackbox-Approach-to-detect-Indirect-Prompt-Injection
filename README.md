@@ -218,25 +218,3 @@ def chat(self, messages: list[dict], **kwargs) -> typing.Any:
 ```
 
 Return either a **string** or an object with **`choices[0].message.content`**. Optionally add **`embed_texts(self, texts: list[str]) -> list[list[float]]`** to enable the semantic channel.
-
-## Limitations
-
-- Meta-prompting and probes **call the same API family** you audit (or a surrogate); results vary with model version, temperature, and quotas.
-- **Free-tier rate limits** (e.g. Gemini) can fill the measurement ledger; interpret **`measurement_status`** and **`api_errors`** alongside scores.
-- Regex and heuristics can **false positive**; embeddings depend on **canonical phrase coverage**.
-- Behavioral probes are **approximate**; task anchoring reduces but does not remove ambiguity vs legitimate task changes.
-
-## Research Background
-
-Inspired by ideas in:
-
-- Meta-prompting for instruction following
-- Self-checking / policy reflection for prompt injection defense
-
-## Contributing
-
-Contributions are welcome via Pull Request.
-
-## License
-
-This project is part of LLM security research. Use responsibly and in line with your organization’s policies.
